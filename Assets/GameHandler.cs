@@ -41,10 +41,6 @@ public class GameHandler : MonoBehaviour {
         isHardMode = mode;
     }
 
-    private void Awake() {
-        
-    }
-
     private void OnEnable() {
         currentTime = timerTime;
 
