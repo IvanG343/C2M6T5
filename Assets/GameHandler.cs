@@ -52,7 +52,7 @@ public class GameHandler : MonoBehaviour {
             for (int i = 0; i < pinsPosition.Length; i++) {
                 pinsPosition[i] = UnityEngine.Random.Range(2, 9);
             }
-        } while (!(pinsPosition.SequenceEqual(lockCode)));
+        } while ((pinsPosition.SequenceEqual(lockCode)));
 
         targetCode.text = $"Для взлома вы должны поставить пины в положение:";
         for (int i = 0; i < lockCode.Length; i++) {
