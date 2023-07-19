@@ -124,6 +124,7 @@ public class GameHandler : MonoBehaviour {
                     pinsPosition[i] += drillStats[i];
                     warningText.text = "¬ы успешно применили инструмент дрель";
                 }
+                UpdatePinPositions();
             } else {
                 warningText.text = "Ќевозможно применить дрель, значение выходит за пределы допустимого диапозона";
             }
@@ -133,11 +134,11 @@ public class GameHandler : MonoBehaviour {
                     pinsPosition[i] += hardDrillStats[i];
                     warningText.text = "¬ы успешно применили инструмент дрель";
                 }
+                UpdatePinPositions();
             } else {
                 warningText.text = "Ќевозможно применить дрель, значение выходит за пределы допустимого диапозона";
             }
         }
-        UpdatePinPositions();
     }
 
     public void HammerOnClick() {
@@ -147,6 +148,7 @@ public class GameHandler : MonoBehaviour {
                     pinsPosition[i] += hammerStats[i];
                     warningText.text = "¬ы успешно применили инструмент молоток";
                 }
+                UpdatePinPositions();
             } else {
                 warningText.text = "Ќевозможно применить молоток, значение выходит за пределы допустимого диапозона";
             }
@@ -156,11 +158,11 @@ public class GameHandler : MonoBehaviour {
                     pinsPosition[i] += hardHammerStats[i];
                     warningText.text = "¬ы успешно применили инструмент молоток";
                 }
+                UpdatePinPositions();
             } else {
                 warningText.text = "Ќевозможно применить молоток, значение выходит за пределы допустимого диапозона";
             }
         }
-        UpdatePinPositions();
     }
 
     public void LockpickOnClick() {
@@ -170,6 +172,7 @@ public class GameHandler : MonoBehaviour {
                     pinsPosition[i] += lockpickStats[i];
                     warningText.text = "¬ы успешно применили инструмент отмычка";
                 }
+                UpdatePinPositions();
             } else {
                 warningText.text = "Ќевозможно применить отмычка, значение выходит за пределы допустимого диапозона";
             }
@@ -179,11 +182,11 @@ public class GameHandler : MonoBehaviour {
                     pinsPosition[i] += hardLockpickStats[i];
                     warningText.text = "¬ы успешно применили инструмент отмычка";
                 }
+                UpdatePinPositions();
             } else {
                 warningText.text = "Ќевозможно применить отмычка, значение выходит за пределы допустимого диапозона";
             }
         }
-        UpdatePinPositions();
     }
 
     public bool CheckIfInstApllicable(int[] instrument) {
