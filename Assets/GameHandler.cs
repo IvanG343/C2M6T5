@@ -44,17 +44,19 @@ public class GameHandler : MonoBehaviour {
     private void OnEnable() {
         currentTime = timerTime;
 
-        for (int i = 0; i < lockCode.Length; i++) {
-            lockCode[i] = UnityEngine.Random.Range(0, 11);
-        }
+        do {
+            for (int i = 0; i < lockCode.Length; i++) {
+                lockCode[i] = UnityEngine.Random.Range(0, 11);
+            }
+
+            for (int i = 0; i < pinsPosition.Length; i++) {
+                pinsPosition[i] = UnityEngine.Random.Range(2, 9);
+            }
+        } while (!(pinsPosition.SequenceEqual(lockCode)));
 
         targetCode.text = $"Для взлома вы должны поставить пины в положение:";
         for (int i = 0; i < lockCode.Length; i++) {
             targetCode.text += " " + lockCode[i];
-        }
-
-        for (int i = 0; i < pinsPosition.Length; i++) {
-            pinsPosition[i] = UnityEngine.Random.Range(2, 9);
         }
 
         UpdatePinPositions();
